@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+
+   "install-all": "npm install --prefix backendd && npm install --prefix frontend/vite-project",
+     "build-frontend": "npm run build --prefix frontend/vite-project",
+        "start-backend": "npm start --prefix backendd",
+    "start": "npm run build-frontend && npm run start-backend"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddharthsinghrajpoot/mern-thinkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siddharthsinghrajpoot/mern-thinkboard/issues"
+  },
+  "homepage": "https://github.com/Siddharthsinghrajpoot/mern-thinkboard#readme",
+  "description": ""
+}
