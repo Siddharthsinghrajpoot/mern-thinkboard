@@ -4,11 +4,11 @@
   "main": "index.js",
   "type":"module",
   "scripts": {
+  "postinstall": "npm install --prefix frontend/vite-project && npm install --prefix backendd",
+  "build-frontend": "npm run build --prefix frontend/vite-project",
+  "start-backend": "npm start --prefix backendd",
+  "start": "npm run build-frontend && npm run start-backend"
 
-   "install-all": "npm install --prefix backendd && npm install --prefix frontend/vite-project",
-     "build-frontend": "npm run build --prefix frontend/vite-project",
-        "start-backend": "npm start --prefix backendd",
-    "start": "npm run build-frontend && npm run start-backend"
 
   },
   "repository": {
