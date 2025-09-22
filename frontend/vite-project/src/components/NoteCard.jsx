@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { PenSquareIcon } from 'lucide-react'
 import { Trash2Icon } from 'lucide-react'
-import axios from "axios";
+import api from '../lib/axios'
 import toast from 'react-hot-toast';
-import { formatDate } from '../utils.js/utils';
+import { formatDate } from '../lib/utils';
 const NoteCard = ({note,setNotes }  ) => {
 
 const handleonClick=async(e,id)=>{
@@ -13,7 +13,7 @@ if(!window.confirm("Are you sure you want to delete this note")) return;
 try{
   console.log(id);
   
-await axios.delete(`http://localhost:5000/api/notes/delete/${id}`);
+await api.delete(`/notes/delete/${id}`);
 
 setNotes((prev)=>prev.filter((note)=>note._id!==id));
 toast.success("deleted");

@@ -3,7 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from 
 "react-router";
-import axios from "axios";
+import api from "../lib/axios";
 
 
 
@@ -33,7 +33,7 @@ const handleSubmit=async(e)=>{
 try{
 
 
- await axios.post('http://localhost:5000/api/notes/div',{
+ await api.post('/notes/div',{
 title,
 content,
 
